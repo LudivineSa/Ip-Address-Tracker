@@ -4,6 +4,7 @@ let pIp = document.querySelector('#p-ip');
 let pIsp = document.querySelector('#p-isp');
 let pUtc = document.querySelector('#p-utc');
 const msgError = document.querySelector('.error')
+const result = document.querySelector('.result')
 
 let getInfo = function(obj) {
     pIsp.textContent = obj.isp;
@@ -22,8 +23,14 @@ let getInfoClear = function(){
 btn.addEventListener('click', function(){
     ip = document.querySelector('#ip-adress').value;
     msgError.style.display = "none";
+    result.style.display = "grid";
     console.log(mymap)
     mymap.remove();
+    if(ip[0] === "w" && ip[1] === "w" && ip[2] === "w" && ip[3] === ".") {
+        getDomain(ip)
+        console.log('hello')
+    } else {
     getAddress(ip)
+    }
 })
 

@@ -134,7 +134,7 @@ p {
         align-items: center;
         text-align: center;
         min-width: 400px;
-        top : -95px;
+        top : -15%;
     }
     p {
         font-size: 26px;
@@ -178,6 +178,11 @@ p {
     #mapid {
         height : 70vh;
     }
+
+    .error {
+        top : 35%;
+        max-height: 300px;
+    }
 }
 
 @media screen and (max-width : 500px) {
@@ -187,7 +192,7 @@ p {
         align-items: center;
         text-align: center;
         min-width: 250px;
-        top : -40px;
+        top : -5%;
     }
     p {
         font-size: 12px;
@@ -226,10 +231,16 @@ p {
     }
 
     header {
-        height : 20vh;
+        height : 25vh;
     }
 
     #mapid {
-        height : 80vh;
+        height : 75vh;
+    }
+
+    .error {
+        max-height: 180px;
+        min-width: 250px;
+        top : 35%;
     }
 }

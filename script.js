@@ -29,8 +29,6 @@ let coordonate = function(obj) {
 
     L.marker((coordonates), {icon:myIcon}).addTo(mymap)
         .bindPopup(coordonates + ' ' + obj.isp)
-        .openPopup();
-
 
     getInfo(obj)
 }
@@ -40,18 +38,26 @@ let coordonate = function(obj) {
 let ip = '';
 
 let getAddress = function(ip) {
-url = 'https://geo.ipify.org/api/v1?apiKey=at_kvKFfSddvJQQiH8a5cw8dmRtWtg0O&ipAddress=' + ip 
-fetch(url)
-  .then(response => response.json())
-  .then(data => coordonate(data))
-  .catch(error => errorMessage(error))
+    url = 'https://geo.ipify.org/api/v1?apiKey=at_kvKFfSddvJQQiH8a5cw8dmRtWtg0O&ipAddress=' + ip 
+    fetch(url)
+        .then(response => response.json())
+        .then(data => coordonate(data))
+        .catch(error => errorMessage(error))
 }
 
 getAddress(ip)
 
 let errorMessage = function(){
+    result.style.display = "none"
     msgError.style.display = "block"
+
 }
 
-
+let getDomain = function(ip){
+    url = 'https://geo.ipify.org/api/v1?apiKey=at_kvKFfSddvJQQiH8a5cw8dmRtWtg0O&domain=' + ip
+    fetch(url)
+    .then(response => response.json())
+    .then(data => coordonate(data))
+    .catch(error => errorMessage(error))
+}
 

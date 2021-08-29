@@ -20,7 +20,7 @@
       <h1>IP Address Tracker</h1>
       <div class="search">
         <input type="text" id="ip-adress" placeholder="Search for any IP address or domain">
-        <button>></button>
+        <button id="btn">></button>
       </div>
     </header>
 
@@ -28,21 +28,27 @@
       <section class="result">
         <div class="ip">
           <h2>IP Address</h2>
-          <p>854.656.4545</p>
+          <p id="p-ip">854.656.4545</p>
         </div>
         <div class="location">
           <h2>Location</h2>
+          <p id="p-location"></p>
         </div>
         <div class="timezone">
           <h2> Timezone </h2>
-          <p class="utc"> UTC</p><!-- add offset value dynamically using the API -->
+          <p id="p-utc"> UTC</p><!-- add offset value dynamically using the API -->
         </div>
         <div class="isp">
           <h2>ISP</h2>
+          <p id="p-isp"></p>
         </div>
       </section>
       <div id="mapid"></div>
     </main>
+
+    <section class="error">
+      <p class="p-error">Sorry, we couldn't find the IP Address you're looking for. Please retry.</p>
+    </section>
     
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -52,8 +58,9 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+    <script src="dom.js"></script>
     <script src="script.js"></script>
-</script>
+    </script>
 
   </body>
 

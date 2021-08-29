@@ -27,12 +27,11 @@ header {
     background-image: url(images/pattern-bg.png);
     background-repeat: no-repeat;
     background-size:cover;
-    padding-top : 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom : 120px;
+    height : 35vh;
 }
 
 input {
@@ -66,8 +65,8 @@ button {
 /*MAIN */
 .result {
     position: absolute;
-    width : 70vw;
-    height : 150px;
+    min-width : 70vw;
+    min-height : 150px;
     z-index: 200;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -85,7 +84,7 @@ main {
 }
 
 #mapid { 
-    height: 550px; 
+    height: 65vh; 
     z-index: 1;
 }
 
@@ -112,4 +111,18 @@ p {
     font-weight: 500;
     margin-top : 10px;
     letter-spacing: 1px;
+}
+
+/* ERROR */
+.error {
+    display : none;
+    position : absolute;
+    top : 70%;
+    text-align: center;
+    left : 50%;
+    z-index: 300;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding : 20px;
+    border-radius: 10px;
 }

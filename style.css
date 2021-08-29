@@ -16,6 +16,7 @@ h1 {
     color : white;
     font-weight: 500;
     padding-bottom : 15px;
+    padding-top : 70px;
 }
 
 h2 {
@@ -29,7 +30,6 @@ header {
     background-size:cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height : 35vh;
 }
@@ -125,4 +125,111 @@ p {
     background-color: white;
     padding : 20px;
     border-radius: 10px;
+}
+
+@media screen and (max-width : 1200px) {
+    .result {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 400px;
+        top : -95px;
+    }
+    p {
+        font-size: 26px;
+        text-align: center;
+        margin-bottom : 300px;
+    }
+
+    h2 {
+        font-size: 14px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .location,
+    .timezone,
+    .isp,
+    .ip {
+        padding : 0;
+        height : 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border : none;
+    }
+
+    .ip{
+        margin-top : 10px;
+    }
+
+    input{
+        width:250px;
+    }
+
+    h1{
+        padding-top: 30px;
+    }
+
+    header {
+        height : 30vh;
+    }
+
+    #mapid {
+        height : 70vh;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .result {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-width: 250px;
+        top : -40px;
+    }
+    p {
+        font-size: 12px;
+        text-align: center;
+        padding : 0
+        }
+
+    h2 {
+        font-size: 10px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .location,
+    .timezone,
+    .isp,
+    .ip {
+        padding : 0;
+        height : 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border : none;
+    }
+
+    .ip{
+        margin-top : 10px;
+    }
+
+    input{
+        width:250px;
+    }
+
+    h1{
+        padding-top: 30px;
+        font-size: 22px;
+    }
+
+    header {
+        height : 20vh;
+    }
+
+    #mapid {
+        height : 80vh;
+    }
 }
